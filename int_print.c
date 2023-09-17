@@ -1,16 +1,6 @@
 #include "main.h"
 
 /**
- * pr - print single char
- * @c: parameter
- * Return: Always 0.
- */
-
-int pr(char c)
-{
-return (write(1, &c, 1));
-}
-/**
  * deci - print int
  * @b: parameter
  * Return: Always 0.
@@ -44,7 +34,7 @@ for (i = 0; i < j; i++)
 if ((s[i] == '%') && ((s[i + 1] == 'd' || s[i + 1] == 'i')))
 count++;
 }
-va_start(args, count);
+va_start(args, *s);
 for (i = 0; i < j; i++)
 {
 if ((s[i] == '%') && ((s[i + 1] == 'd' || s[i + 1] == 'i')))
