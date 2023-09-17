@@ -20,23 +20,24 @@ pr(((b % 10) + '0'));
 
 /**
  * _printf - print args of int
- * @s: parameter
+ * @format: parameter
  * Return: Always 0.
  */
-void _printf(char *s, ...)
+int _printf(const char *format, ...)
 {
 va_list args;
 int i, j = 0, m;
-while (s[j] != '\0')
+while (format[j] != '\0')
 j++;
-va_start(args, *s);
+va_start(args, *format);
 for (i = 0; i < j; i++)
 {
-if ((s[i] == '%') && ((s[i + 1] == 'd' || s[i + 1] == 'i')))
+if ((format[i] == '%') && ((format[i + 1] == 'd' || format[i + 1] == 'i')))
 {
 m = va_arg(args, int);
 deci(m);
 }}
 va_end(args);
+return (0);
 }
 
