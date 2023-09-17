@@ -26,14 +26,9 @@ pr(((b % 10) + '0'));
 void _printf(char *s, ...)
 {
 va_list args;
-int i, j = 0, count = 0, m;
+int i, j = 0, m;
 while (s[j] != '\0')
 j++;
-for (i = 0; i < j; i++)
-{
-if ((s[i] == '%') && ((s[i + 1] == 'd' || s[i + 1] == 'i')))
-count++;
-}
 va_start(args, *s);
 for (i = 0; i < j; i++)
 {
