@@ -6,7 +6,7 @@
 int _printf(const char *format, ...);
 int pr(char c);
 void deci(int b);
-
+void str(char *s);
 
 
 #endif
