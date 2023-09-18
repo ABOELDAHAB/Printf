@@ -38,9 +38,9 @@ m = va_arg(args, int);
 deci(m);
 }
 else if (!((format[i - 1] == '%') &&
-((format[i] == 'd' || format[i + 1] == 'i'))))
+((format[i] == 'd' || format[i] == 'i'))))
 pr(format[i]);
 }
 va_end(args);
-return (0);
+return (i);
 }
