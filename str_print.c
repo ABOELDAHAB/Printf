@@ -5,7 +5,7 @@
  * @format: parameter
  * Return: Always 0.
  */
-int _printf(const char *format, ...)
+int _pprintf(const char *format, ...)
 {
 va_list args;
 int i, j = 0;
@@ -30,5 +30,5 @@ else if (!((format[i - 1] == '%') &&
 pr(format[i]);
 }
 va_end(args);
-return (0);
+return (i);
 }
