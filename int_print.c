@@ -36,7 +36,13 @@ if ((format[i] == '%') && ((format[i + 1] == 'd' || format[i + 1] == 'i')))
 {
 m = va_arg(args, int);
 deci(m);
-}}
+}
+else if ((format[i] == '\') && (format[i + 1] == 'n'))
+pr('\n');
+
+else
+pr(format[i]);
+}
 va_end(args);
 return (0);
 }
