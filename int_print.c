@@ -23,7 +23,7 @@ pr(((b % 10) + '0'));
  * @format: parameter
  * Return: Always 0.
  */
-int _pprintf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 va_list args;
 int i, j = 0, m;
