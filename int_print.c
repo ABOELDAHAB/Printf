@@ -37,8 +37,8 @@ if ((format[i] == '%') && ((format[i + 1] == 'd' || format[i + 1] == 'i')))
 m = va_arg(args, int);
 deci(m);
 }
-
-else
+else if (!((format[i - 1] == '%') &&
+((format[i] == 'd' || format[i + 1] == 'i'))))
 pr(format[i]);
 }
 va_end(args);
