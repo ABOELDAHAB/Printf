@@ -14,9 +14,9 @@ void deci(int b);
 >>>>>>> 190f55e2b0873fc22f87117c46526b1aaf77c777
 
 /**
- * struct tk - Short description
- * @tk: the operator to ve examined
- * @f: pointer to function.
+ * struct mix - Short description
+ * @mix: type char pointer
+ * @func: pointer to function.
  *
  * Description: Longer description
  */
