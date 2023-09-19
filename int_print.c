@@ -5,7 +5,7 @@
  * @format: parameter
  * Return: Always 0.
  */
-int _printf(const char *format, ...)
+int int_printf(const char *format, ...)
 {
 va_list args;
 int i, j = 0, m;
