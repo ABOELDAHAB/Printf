@@ -17,10 +17,11 @@ for (i = 0; format[i] != '\0'; i++)
 for (j = 0; j < 3; j++)
 {
 if ((format[i] == xm[j].mix[0]) && (format[i + 1] == xm[j].mix[1]))
-xm[j].func(args);
-else if (!((format[i - 1] == xm[j].mix[0]) && (format[i] == xm[j].mix[1])))
-pr(format[i]);
+{xm[j].func(args);
+i=i+2;
 }}
+pr(format[i]);
+}
 va_end(args);
 return (i);
 }
