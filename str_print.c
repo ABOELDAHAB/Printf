@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _printf - print args of int
+ * T_printf - print args of int
  * @format: parameter
  * Return: Always 0.
  */
