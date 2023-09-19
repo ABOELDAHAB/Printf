@@ -7,7 +7,7 @@
  */
 int _printf(const char * const format, ...)
 {
-mix_t xm[] = {{"%s", str_print}, {"%i", int_print}, {"%d", int_print}}
+mix_t xm[] = {{"%s", test_str}, {"%i", test_deci}, {"%d", test_deci}}
 int i, j, x;
 va_list args;
 va_start(args, format)
