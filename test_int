@@ -9,7 +9,7 @@ void test_deci(va_list bb)
 {
 int b;
 
-b = va_args(bb, int)
+b = va_args(bb, int);
 if (b < 0)
 {
 b = b * -1;
