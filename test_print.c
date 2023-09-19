@@ -22,7 +22,7 @@ if ((format[i] == xm[j].mix[0]) && (format[i + 1] == xm[j].mix[1]))
 {xm[j].func(args);
 i=i+2;
 }}
-if (format[i] != '\0')
+if ((format[i] != '\0') && !((format[i] == '%') && (format[i + 1] == '%')))
 pr(format[i]);
 }
 va_end(args);
