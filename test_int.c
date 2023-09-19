@@ -10,5 +10,8 @@ void test_deci(va_list bb)
 int b;
 
 b = va_arg(bb, int);
+if (b != 0)
 deci(b);
+else if (b == 0)
+pr('0');
 }
