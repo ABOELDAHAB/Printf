@@ -9,6 +9,6 @@ void test_deci(va_list bb)
 {
 int b;
 
-b = va_args(bb, int);
+b = va_arg(bb, int);
 deci(b);
 }
