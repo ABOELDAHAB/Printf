@@ -20,10 +20,13 @@ void deci(int b);
  *
  * Description: Longer description
  */
-typedef struct tk
+typedef struct mix
 {
-} tk_t;
-
+	char *mix;
+	int (*func)();
+} mix_t;
+void test_deci(va_list bb);
+void test_str(va_list ss);
 void deci(int b);
 int _printf(const char *format, ...);
 int pr(char c);
