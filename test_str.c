@@ -9,11 +9,11 @@ void test_str(va_list ss)
 {
 char *s;
 
-s = va_args(ss, *char)
+s = va_arg(ss, char*);
 if (!*s)
 {
 return;
 }
 pr(*s);
-(s + 1);
+test_str(ss + 1);
 }
