@@ -13,7 +13,7 @@
 typedef struct mix
 {
 	char *mix;
-	int (*func)();
+	void (*func)();
 } mix_t;
 void test_deci(va_list bb);
 void test_str(va_list ss);
