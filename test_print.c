@@ -12,6 +12,8 @@ int i = 0, j;
 va_list args;
 va_start(args, format);
 
+if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+return (-1);
 for (i = 0; format[i] != '\0'; i++)
 {
 for (j = 0; j < 3; j++)
