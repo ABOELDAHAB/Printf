@@ -9,6 +9,6 @@ void test_str(va_list ss)
 {
 char *s;
 
-s = va_arg(ss, *char);
+s = va_arg(ss, char*);
 str(s);
 }
