@@ -7,9 +7,9 @@
  */
 int _printf(const char * const format, ...)
 {
-mix_t xm[] = {{"%s", test_str}, {"%i", test_deci}, {"%d",
-test_deci}, {"%c", test_char}};
-int i = 0, j;
+mix_t xm[] = {{"%s", test_str}, {"%i", test_deci},
+{"%c", test_char}, {"%d",test_deci}};
+int i = 0,ii = 0, j;
 char dod;
 va_list args;
 va_start(args, format);
@@ -24,17 +24,21 @@ if (((format[i] == xm[j].mix[0]) && (format[i + 1] == xm[j].mix[1]))
 && ((format[i] == xm[j].mix[0]) && (format[i + 1] == xm[j].mix[1])))
 {
 xm[j].func(args);
+ii = i + 1;
 }
 else if (((format[i - 1] != xm[j].mix[0]) && (format[i] != xm[j].mix[1]))
 && ((format[i] != xm[j].mix[0]) && (format[i + 1] != xm[j].mix[1])))
+{
 dod = format[i];
-else
-dod = NULL;
+ii = i + 1;
 }
-if ((dod != NULL) && (format[i] == '%')
-&& (format[i + 1] != '%'))
+else
+dod = '\0';
+}
+if ((dod != '\0') && (format[i] != '%%')
+&& (format[i + 1] != '%%'))
 pr(dod);
 }
 va_end(args);
-return (i - 1);
+return (ii);
 }
