@@ -8,8 +8,8 @@
 int _printf(const char * const format, ...)
 {
 mix_t xm[] = {{"%s", test_str}, {"%i", test_deci},
-{"%c", test_char}, {"%d",test_deci}};
-int i = 0,ii = 0, j;
+{"%c", test_char}, {"%d", test_deci}};
+int i = 0, ii = 0, j;
 char dod;
 va_list args;
 va_start(args, format);
