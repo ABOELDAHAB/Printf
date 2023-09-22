@@ -35,8 +35,7 @@ ii = i + 1;
 else
 dod = '\0';
 }
-if ((dod != '\0') && (format[i] != '%%')
-&& (format[i + 1] != '%%'))
+if (dod != '\0')
 pr(dod);
 }
 va_end(args);
