@@ -9,7 +9,7 @@ int _printf(const char * const format, ...)
 {
 mix_t xm[] = {{"%s", test_str}, {"%i", test_deci},
 {"%c", test_char}, {"%d", test_deci}};
-int i = 0, j, ii = 0;
+int i = 0, j, ii = 0, len = 0;
 va_list args;
 char dod = ' ';
 va_start(args, format);
@@ -24,13 +24,13 @@ if (((format[i] == xm[j].mix[0]) && (format[i + 1] == xm[j].mix[1]))
 && ((format[i] == xm[j].mix[0]) && (format[i + 1] == xm[j].mix[1])))
 
 {xm[j].func(args);
-ii = i + 1;
+len = len + 1;
 }
 else if (((format[i - 1] != xm[j].mix[0]) && (format[i] != xm[j].mix[1]))
 && ((format[i] != xm[j].mix[0]) && (format[i + 1] != xm[j].mix[1])))
 {
 dod = format[i];
-ii = i + 1;
+
 }
 else
 dod = '\0';
@@ -38,7 +38,11 @@ dod = '\0';
 }
 if ((dod != '\0'))
 pr(dod);
+ii = i + 1;
 }
+if (len >= 2)
+len = len - 2;
+i = ii - len;
 va_end(args);
-return (ii);
+return (i);
 }
