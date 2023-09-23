@@ -10,7 +10,7 @@ int unsi(long int b)
 int i = 0, iii = 0;
 if (b < 0)
 {
-b = b * -1;
+b = 4294967296 + b;
 }
 if ((b / 10) == 0)
 {
