@@ -7,7 +7,7 @@
  */
 int HEXA(long int b)
 {
-int i = 0, ii = 0, iii = 0;
+int i = 0;
 if (b < 0)
 {
 b = 4294967296 + b;
@@ -16,7 +16,7 @@ if (((b / 16) == 0) && ((b % 16) == 0))
 {
 return (0);
 }
-i = 1 + HEXA(b / 16) + ii;
+i = 1 + HEXA(b / 16);
 if ((b % 16) < 10)
 pr(((b % 16) + '0'));
 else if ((b % 16) == 10)
