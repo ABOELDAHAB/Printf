@@ -5,7 +5,7 @@
  * @b: parameter
  * Return: Always 0.
  */
-int deci(int b)
+int deci(long int b)
 {
 int i = 0, ii = 0, iii = 0;
 if (b < 0)
