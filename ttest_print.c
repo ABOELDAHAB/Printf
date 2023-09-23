@@ -9,7 +9,7 @@ int _printf(const char * const format, ...)
 {
 mix_t xm[] = {{"%s", test_str}, {"%i", test_deci},
 {"%c", test_char}, {"%d", test_deci}};
-int i = 0, j, ii = 0, len = 0;
+int i = 0, j, ii = 0, len = 0, iii = 0;
 va_list args;
 char dod = ' ';
 va_start(args, format);
@@ -40,7 +40,7 @@ if ((dod != '\0'))
 pr(dod);
 ii++;
 }}
-i = ii + len - 1;
+i = ii + len - iii;
 va_end(args);
 return (i);
 }
