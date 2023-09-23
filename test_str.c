@@ -5,10 +5,12 @@
  * @ss: parameter
  * Return: Always 0.
  */
-void test_str(va_list ss)
+int test_str(va_list ss)
 {
 char *s;
+int i = 0;
 
 s = va_arg(ss, char*);
-str(s);
+i = 1 + str(s);
+return (i);
 }
