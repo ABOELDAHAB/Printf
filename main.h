@@ -15,8 +15,10 @@ typedef struct mix
 	int (*func)();
 } mix_t;
 int test_deci(va_list bb);
+int test_beni(va_list bb);
 int test_str(va_list ss);
 int deci(long int b);
+int beni(int b);
 int _printf(const char *format, ...);
 int pr(char c);
 int test_char(va_list cc);
