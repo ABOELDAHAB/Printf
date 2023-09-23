@@ -11,7 +11,6 @@ int b;
 int i = 0;
 
 b = va_arg(bb, int);
-if (b != 0)
 i = 1 + deci(b);
 return (i);
 }
