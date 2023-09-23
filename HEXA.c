@@ -14,25 +14,24 @@ b = b * -1;
 pr('-');
 ii++;
 }
-if ((b / 16) == 0)
+if (((b / 16) == 0) && ((b % 16) == 0))
 {
-iii = 1 + pr(b + '0');
-return (iii + i - 1);
+return (0);
 }
-i = 1 + deci(b / 16) + ii;
-if (((b % 16) * 16) < 16)
+i = 1 + HEXA(b / 16) + ii;
+if ((b % 16) < 10)
 pr(((b % 16) + '0'));
-else if (((b % 16) * 16) == 10)
+else if ((b % 16) == 10)
 pr('A');
-else if (((b % 16) * 16) == 11)
+else if ((b % 16) == 11)
 pr('B');
-else if (((b % 16) * 16) == 12)
+else if ((b % 16) == 12)
 pr('C');
-else if (((b % 16) * 16) == 13)
+else if ((b % 16) == 13)
 pr('D');
-else if (((b % 16) * 16) == 14)
+else if ((b % 16) == 14)
 pr('E');
-else if (((b % 16) * 16) == 15)
+else if ((b % 16) == 15)
 pr('F');
 return (i);
 }
