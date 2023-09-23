@@ -23,14 +23,15 @@ for (j = 0; j < 4; j++)
 if (((format[i] == xm[j].mix[0]) && (format[i + 1] == xm[j].mix[1]))
 && ((format[i] == xm[j].mix[0]) && (format[i + 1] == xm[j].mix[1])))
 
-{xm[j].func(args);
-len = len + 1;
+{
+len = len + xm[j].func(args);
 }
 else if (((format[i - 1] != xm[j].mix[0]) && (format[i] != xm[j].mix[1]))
 && ((format[i] != xm[j].mix[0]) && (format[i + 1] != xm[j].mix[1])))
 {
-dod = format[i];
-
+{dod = format[i];
+ii++;
+}
 }
 else
 dod = '\0';
@@ -38,11 +39,8 @@ dod = '\0';
 }
 if ((dod != '\0'))
 pr(dod);
-ii = i + 1;
 }
-if (len >= 2)
-len = len - 2;
-i = ii - len;
+i = ii + len;
 va_end(args);
 return (i);
 }
