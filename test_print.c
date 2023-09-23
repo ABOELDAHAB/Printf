@@ -27,6 +27,7 @@ len = len + 2;
 else
 ii = i;
 }
+if (format[i] != '0')
 pr(format[i]);
 ii++;
 }
