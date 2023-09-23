@@ -5,7 +5,7 @@
  * @b: parameter
  * Return: Always 0.
  */
-int beni(int b)
+int beni(unsigned int b)
 {
 int i = 0, iii = 0;
 if ((b / 2) == 0)
