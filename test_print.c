@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _printf - print args of int
+ * t_printf - print args of int
  * @format: parameter
  * Return: Always 0.
  */
-int _printf(const char * const format, ...)
+int t_printf(const char * const format, ...)
 {
 mix_t xm[] = {{"%s", test_str}, {"%i", test_deci},
 {"%c", test_char}, {"%d", test_deci}};

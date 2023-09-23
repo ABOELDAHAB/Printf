@@ -21,6 +21,7 @@ void deci(int b);
 int _printf(const char *format, ...);
 int pr(char c);
 void test_char(va_list cc);
+int t_printf(const char * const format, ...);
 void str(char *s);
 int str_printf(const char *format, ...);
 int int_printf(const char *format, ...);
