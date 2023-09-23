@@ -5,12 +5,15 @@
  * @s: parameter
  * Return: Always 0.
  */
-void str(char *s)
+int str(char *s)
 {
+int i = 0;
+
 if (!*s)
 {
 return;
 }
 pr(*s);
-str(s + 1);
+i = 1 + str(s + 1);
+return (i);
 }
