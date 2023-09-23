@@ -14,7 +14,7 @@ b = b * -1;
 pr('-');
 }
 if (b == 0)
-return;
+return (0);
 i = 1 + deci(b / 10);
 pr(((b % 10) + '0'));
 return (i);

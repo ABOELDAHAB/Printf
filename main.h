@@ -12,16 +12,16 @@
 typedef struct mix
 {
 	char *mix;
-	void (*func)();
+	int (*func)();
 } mix_t;
-void test_deci(va_list bb);
-void test_str(va_list ss);
-void deci(int b);
+int test_deci(va_list bb);
+int test_str(va_list ss);
+int deci(int b);
 int _printf(const char *format, ...);
 int pr(char c);
-void test_char(va_list cc);
+int test_char(va_list cc);
 int t_printf(const char * const format, ...);
-void str(char *s);
+int str(char *s);
 int str_printf(const char *format, ...);
 int int_printf(const char *format, ...);
 #endif

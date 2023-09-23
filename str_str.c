@@ -11,7 +11,7 @@ int i = 0;
 
 if (!*s)
 {
-return;
+return (0);
 }
 pr(*s);
 i = 1 + str(s + 1);
