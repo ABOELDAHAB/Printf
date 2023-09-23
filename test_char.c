@@ -5,10 +5,12 @@
  * @cc: parameter
  * Return: Always 0.
  */
-void test_char(va_list cc)
+int test_char(va_list cc)
 {
+int i = 0;
 char c;
 
 c = va_arg(cc, int);
-pr(c);
+i = 1 + pr(c);
+return (i);
 }
