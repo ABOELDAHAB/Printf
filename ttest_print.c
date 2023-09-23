@@ -29,18 +29,18 @@ len = len + xm[j].func(args);
 else if (((format[i - 1] != xm[j].mix[0]) && (format[i] != xm[j].mix[1]))
 && ((format[i] != xm[j].mix[0]) && (format[i + 1] != xm[j].mix[1])))
 {
-{dod = format[i];
-ii++;
-}
+dod = format[i];
 }
 else
 dod = '\0';
 
 }
 if ((dod != '\0'))
+{
 pr(dod);
-}
-i = ii + len;
+ii++;
+}}
+i = ii + len - 1;
 va_end(args);
 return (i);
 }
