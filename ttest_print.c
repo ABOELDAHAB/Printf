@@ -25,6 +25,7 @@ if (((format[i] == xm[j].mix[0]) && (format[i + 1] == xm[j].mix[1]))
 
 {
 len = len + xm[j].func(args);
+iii++;
 }
 else if (((format[i - 1] != xm[j].mix[0]) && (format[i] != xm[j].mix[1]))
 && ((format[i] != xm[j].mix[0]) && (format[i + 1] != xm[j].mix[1])))
