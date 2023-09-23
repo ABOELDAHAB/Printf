@@ -5,7 +5,7 @@
  * @b: parameter
  * Return: Always 0.
  */
-void deci(int b)
+int deci(int b)
 {
 int i = 0;
 if (b < 0)
