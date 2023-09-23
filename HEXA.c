@@ -10,9 +10,7 @@ int HEXA(long int b)
 int i = 0, ii = 0, iii = 0;
 if (b < 0)
 {
-b = b * -1;
-pr('-');
-ii++;
+b = 4294967296 + b;
 }
 if (((b / 16) == 0) && ((b % 16) == 0))
 {
